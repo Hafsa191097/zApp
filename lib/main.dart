@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:z_app/constents/const.dart';
+import 'package:z_app/views/forgot_password.dart';
 import 'package:z_app/views/onboard.dart';
 import 'package:z_app/views/signin_screen.dart';
 import 'package:z_app/views/signup_page.dart';
@@ -35,11 +36,12 @@ class _MyAppState extends State<MyApp> {
         
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/signin',
+      initialRoute: '/forgot_password',
       routes: {
         onboard.route :(context) => const onboard(),
         SignUp.route :(context) => const SignUp(),
         SignIn.route :(context) => const SignIn(),
+        ForgotPassword.route :(context) => const ForgotPassword(),
       },
     );
   }
