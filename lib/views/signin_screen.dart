@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:z_app/common_widgets/textformfield.dart';
 import 'package:z_app/constents/const.dart';
 
@@ -11,7 +13,7 @@ class SignIn extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 30, top: 65),
             child: SizedBox(
               width: 181,
@@ -26,35 +28,40 @@ class SignIn extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
-          TextFormFiledWidget(
+          const TextFormFiledWidget(
             hint: 'Username or Email',
             icon: Icons.person_2_rounded,
             postfixIcon: null,
           ),
-          TextFormFiledWidget(
+          const TextFormFiledWidget(
             hint: 'Password',
             icon: Icons.lock,
             postfixIcon: Icons.remove_red_eye,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 30),
+           Padding(
+            padding: EdgeInsets.only(right: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text(
-                  'Forgot Password?',
-                  style: TextStyle(color: Colors.red),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.pushNamed(context, '/forgot_password');
+                  },
+                  child: Text(
+                    'Forgot Password?',
+                    style: TextStyle(color: Colors.red),
+                  ),
                 ),
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           Padding(
@@ -65,10 +72,10 @@ class SignIn extends StatelessWidget {
                 FloatingActionButton(
                   elevation: 20,
                   focusElevation: BorderSide.strokeAlignOutside,
-                  shape: CircleBorder(),
+                  shape: const CircleBorder(),
                   backgroundColor: primary_color,
                   onPressed: () {},
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_forward,
                     color: Colors.white,
                   ),
@@ -76,7 +83,7 @@ class SignIn extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 80,
           ),
           Row(
@@ -96,7 +103,7 @@ class SignIn extends StatelessWidget {
             children: [
               FloatingActionButton(
                 focusElevation: BorderSide.strokeAlignOutside,
-                shape: CircleBorder(),
+                shape: const CircleBorder(),
                 backgroundColor: primary_color,
                 onPressed: () {},
                 child: Image.asset(
@@ -107,7 +114,7 @@ class SignIn extends StatelessWidget {
               ),
               FloatingActionButton(
                 focusElevation: BorderSide.strokeAlignOutside,
-                shape: CircleBorder(),
+                shape: const CircleBorder(),
                 backgroundColor: primary_color,
                 onPressed: () {},
                 child: Image.asset(
@@ -118,7 +125,7 @@ class SignIn extends StatelessWidget {
               ),
               FloatingActionButton(
                 focusElevation: BorderSide.strokeAlignOutside,
-                shape: CircleBorder(),
+                shape: const CircleBorder(),
                 backgroundColor: primary_color,
                 onPressed: () {},
                 child: Image.asset(
@@ -129,15 +136,20 @@ class SignIn extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 150,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'Back',
-                style: TextStyle(color: light_text_color),
+              GestureDetector(
+                onTap: (){
+                  Navigator.pop(context);
+                },
+                child: Text(
+                  'Back',
+                  style: TextStyle(color: light_text_color),
+                ),
               ),
             ],
           ),

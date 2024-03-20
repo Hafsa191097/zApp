@@ -8,21 +8,24 @@ class onboard extends StatelessWidget {
   static String route = '/';
   @override
   Widget build(BuildContext context) {
-    return OnBoardingAnimation(
-      controller: PageController(initialPage: 1),
-      pages: const [
-        OnBoarding(),
-        OnBoarding(),
-        OnBoarding(),
-      ],
-      
-      indicatorDotHeight: 7.0,
-      indicatorDotWidth: 8.0,
-      indicatorDotSpacing : 3.0,
-      indicatorType: IndicatorType.expandingDots,
-      indicatorPosition: IndicatorPosition.bottomCenter,
-      indicatorInActiveDotColor:  grey_color,
-      indicatorActiveDotColor: primary_color
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 155.0),
+      child: OnBoardingAnimation(
+        controller: PageController(initialPage: 1),
+        pages: const [
+          OnBoarding(),
+          OnBoarding(),
+          OnBoarding(),
+        ],
+        
+        indicatorDotHeight: 7.0,
+        indicatorDotWidth: 8.0,
+        indicatorDotSpacing : 3.0,
+        indicatorType: IndicatorType.expandingDots,
+        indicatorPosition: IndicatorPosition.bottomCenter,
+        indicatorInActiveDotColor:  grey_color,
+        indicatorActiveDotColor: primary_color
+      ),
     );  
   }
 }

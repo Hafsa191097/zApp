@@ -36,7 +36,7 @@ class _MyAppState extends State<MyApp> {
         
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/forgot_password',
+      initialRoute: '/',
       routes: {
         onboard.route :(context) => const onboard(),
         SignUp.route :(context) => const SignUp(),

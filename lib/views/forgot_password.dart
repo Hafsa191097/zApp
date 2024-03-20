@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:z_app/common_widgets/textformfield.dart';
 import 'package:z_app/constents/const.dart';
 
@@ -88,9 +89,14 @@ class ForgotPassword extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'Back',
-                style: TextStyle(color: light_text_color),
+              GestureDetector(
+                onTap: (){
+                  Navigator.pop(context);
+                },
+                child: Text(
+                  'Back',
+                  style: TextStyle(color: light_text_color),
+                ),
               ),
             ],
           ),
