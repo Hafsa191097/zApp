@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:z_app/views/onboard.dart';
 
 import 'views/onboarding.dart';
 
@@ -32,7 +33,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        OnBoarding.route :(context) => const OnBoarding(),
+        onboard.route :(context) => const onboard(),
         
       },
     );
