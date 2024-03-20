@@ -6,8 +6,6 @@ import 'package:z_app/views/onboard.dart';
 import 'package:z_app/views/signin_screen.dart';
 import 'package:z_app/views/signup_page.dart';
 
-import 'views/onboarding.dart';
-
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);

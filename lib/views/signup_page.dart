@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:z_app/common_widgets/back_gesturedetector.dart';
+import 'package:z_app/common_widgets/header.dart';
+import 'package:z_app/common_widgets/image_floatingbtn.dart';
 import 'package:z_app/common_widgets/textformfield.dart';
 import 'package:z_app/constents/const.dart';
 
@@ -12,21 +15,8 @@ class SignUp extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 30, top: 65),
-            child: SizedBox(
-              width: 181,
-              height: 100,
-              child: Text(
-                'Create an account',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 36,
-                    fontWeight: FontWeight.w800),
-                textAlign: TextAlign.start,
-              ),
-            ),
-          ),
+          Header(text: 'Create an account',),
+          
           const SizedBox(
             height: 15,
           ),
@@ -111,61 +101,19 @@ class SignUp extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              FloatingActionButton(
-                focusElevation: BorderSide.strokeAlignOutside,
-                shape: const CircleBorder(),
-                backgroundColor: primary_color,
-                onPressed: () {},
-                child: Image.asset(
-                  'assets/google.png',
-                  width: 25,
-                  height: 25,
-                ),
-              ),
-              FloatingActionButton(
-                focusElevation: BorderSide.strokeAlignOutside,
-                shape: const CircleBorder(),
-                backgroundColor: primary_color,
-                onPressed: () {},
-                child: Image.asset(
-                  'assets/apple.png',
-                  width: 25,
-                  height: 25,
-                ),
-              ),
-              FloatingActionButton(
-                focusElevation: BorderSide.strokeAlignOutside,
-                shape: const CircleBorder(),
-                backgroundColor: primary_color,
-                onPressed: () {},
-                child: Image.asset(
-                  'assets/fb.png',
-                  width: 25,
-                  height: 25,
-                ),
-              ),
+              ImageFloatingActionButton(path: 'assets/google.png',),
+              ImageFloatingActionButton(path: 'assets/apple.png',),
+              ImageFloatingActionButton(path: 'assets/fb.png',),
+              
             ],
           ),
           const SizedBox(
             height: 150,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: (){
-                  Navigator.pop(context);
-                },
-                child: Text(
-                  'Back',
-                  style: TextStyle(color: light_text_color),
-                ),
-              ),
-            ],
-          ),
+          const Gesture_Detector_Text()
         ],
       ),
     );
