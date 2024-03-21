@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:z_app/constents/const.dart';
 
 class Floating_Action_Btn extends StatelessWidget {
-  const Floating_Action_Btn({super.key});
-
+  const Floating_Action_Btn({super.key, required this.icon, this.action});
+  final IconData icon;
+  final VoidCallback? action;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -16,9 +17,9 @@ class Floating_Action_Btn extends StatelessWidget {
             focusElevation: BorderSide.strokeAlignOutside,
             shape: const CircleBorder(),
             backgroundColor: primary_color,
-            onPressed: () {},
-            child: const Icon(
-              Icons.arrow_forward,
+            onPressed: action,
+            child: Icon(
+              icon,
               color: Colors.white,
             ),
           ),

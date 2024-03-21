@@ -52,7 +52,9 @@ class ForgotPassword extends StatelessWidget {
           const SizedBox(
             height: 40,
           ),
-          Floating_Action_Btn(),
+          Floating_Action_Btn(icon: Icons.arrow_forward, action: () {
+            Navigator.pushNamed(context, '/profilepage');
+          },),
    
           const SizedBox(
             height: 400,

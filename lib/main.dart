@@ -3,8 +3,10 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:z_app/constents/const.dart';
 import 'package:z_app/views/forgot_password.dart';
 import 'package:z_app/views/onboard.dart';
+import 'package:z_app/views/setup_profile.dart';
 import 'package:z_app/views/signin_screen.dart';
 import 'package:z_app/views/signup_page.dart';
+import 'package:z_app/views/specialized_areas.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -40,6 +42,8 @@ class _MyAppState extends State<MyApp> {
         SignUp.route :(context) => const SignUp(),
         SignIn.route :(context) => const SignIn(),
         ForgotPassword.route :(context) => const ForgotPassword(),
+        SetupProfile.route:(context) => const SetupProfile(),
+        Specialized_Areas.route:(context) => const Specialized_Areas()
       },
     );
   }

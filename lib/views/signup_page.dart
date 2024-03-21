@@ -6,6 +6,8 @@ import 'package:z_app/common_widgets/image_floatingbtn.dart';
 import 'package:z_app/common_widgets/textformfield.dart';
 import 'package:z_app/constents/const.dart';
 
+import '../common_widgets/floating_actionbtn.dart';
+
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
   static String route = '/signup';
@@ -15,8 +17,9 @@ class SignUp extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Header(text: 'Create an account',),
-          
+          const Header(
+            text: 'Create an account',
+          ),
           const SizedBox(
             height: 15,
           ),
@@ -70,18 +73,11 @@ class SignUp extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                FloatingActionButton(
-                  elevation: 20,
-                  focusElevation: BorderSide.strokeAlignOutside,
-                  shape: const CircleBorder(),
-                  backgroundColor: primary_color,
-                  onPressed: () {
+                Floating_Action_Btn(
+                  icon: Icons.arrow_forward,
+                  action: () {
                     Navigator.pushNamed(context, '/signin');
                   },
-                  child: const Icon(
-                    Icons.arrow_forward,
-                    color: Colors.white,
-                  ),
                 ),
               ],
             ),
@@ -104,10 +100,15 @@ class SignUp extends StatelessWidget {
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ImageFloatingActionButton(path: 'assets/google.png',),
-              ImageFloatingActionButton(path: 'assets/apple.png',),
-              ImageFloatingActionButton(path: 'assets/fb.png',),
-              
+              ImageFloatingActionButton(
+                path: 'assets/google.png',
+              ),
+              ImageFloatingActionButton(
+                path: 'assets/apple.png',
+              ),
+              ImageFloatingActionButton(
+                path: 'assets/fb.png',
+              ),
             ],
           ),
           const SizedBox(

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:z_app/common_widgets/back_gesturedetector.dart';
+import 'package:z_app/common_widgets/floating_actionbtn.dart';
 import 'package:z_app/common_widgets/header.dart';
 import 'package:z_app/common_widgets/image_floatingbtn.dart';
 import 'package:z_app/common_widgets/textformfield.dart';
@@ -35,7 +36,7 @@ class SignIn extends StatelessWidget {
             height: 10,
           ),
            Padding(
-            padding: EdgeInsets.only(right: 30),
+            padding: const EdgeInsets.only(right: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -54,21 +55,16 @@ class SignIn extends StatelessWidget {
           const SizedBox(
             height: 40,
           ),
-          Padding(
+           Padding(
             padding: const EdgeInsets.only(right: 25.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                FloatingActionButton(
-                  elevation: 20,
-                  focusElevation: BorderSide.strokeAlignOutside,
-                  shape: const CircleBorder(),
-                  backgroundColor: primary_color,
-                  onPressed: () {},
-                  child: const Icon(
-                    Icons.arrow_forward,
-                    color: Colors.white,
-                  ),
+                Floating_Action_Btn(
+                  icon: Icons.arrow_forward,
+                  action: () {
+                    Navigator.pushNamed(context, '/profilepage');
+                  },
                 ),
               ],
             ),
