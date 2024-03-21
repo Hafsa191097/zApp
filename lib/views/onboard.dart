@@ -11,7 +11,7 @@ class onboard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 155.0),
       child: OnBoardingAnimation(
-        controller: PageController(initialPage: 1),
+        controller: PageController(initialPage: 0),
         pages: const [
           OnBoarding(),
           OnBoarding(),

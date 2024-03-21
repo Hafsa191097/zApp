@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:z_app/constents/const.dart';
 
 class Profile_Header extends StatelessWidget {
@@ -8,7 +10,7 @@ class Profile_Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(children: [
       SizedBox(
-        height: 150,
+        height: 100,
         width: 370,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
