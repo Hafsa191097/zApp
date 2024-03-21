@@ -17,6 +17,7 @@ class WelcomePage_Profile_Setup extends StatelessWidget {
               description:
                   'Thank you for sharing your contact information with me for consideration for future projects. Please fill out as much as you can, but you can come back to this link to make updates whenever you need to.',
             ),
+            SizedBox(height: 18,),
             Stack(
               alignment: Alignment.topRight,
               children: [
@@ -247,7 +248,9 @@ class WelcomePage_Profile_Setup extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(5.0),
                                 side:  BorderSide(width: 2,color: primary_color)),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/reviewprofilepage');
+                          },
                           child: const Text("Continue",style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.w600),),
                         ),
                       ),

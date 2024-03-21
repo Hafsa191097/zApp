@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:z_app/common_widgets/linearbar_indicator.dart';
+import 'package:z_app/common_widgets/primary_btn.dart';
 import 'package:z_app/common_widgets/profile_header.dart';
 
 class Specialized_Areas extends StatefulWidget {
@@ -35,9 +36,9 @@ class _Specialized_AreasState extends State<Specialized_Areas> {
               ),
             ),
           ),
-          const SizedBox(height: 40),
+          SizedBox(height: 15,),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(10.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -48,7 +49,7 @@ class _Specialized_AreasState extends State<Specialized_Areas> {
                 ),
                 const SizedBox(height: 20),
                 Container(
-                  height: 600,
+                  height: 500,
                   child: ListView.builder(
                     itemCount: specializedAreas.length + 1,
                     itemBuilder: (context, index) {
@@ -69,20 +70,23 @@ class _Specialized_AreasState extends State<Specialized_Areas> {
                               }
                             });
                           },
-                          child: Container(
-                            height: 50,
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.black),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            child: const Center(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text('Add Specialized Area'),
-                                  SizedBox(height: 8),
-                                  Icon(Icons.add),
-                                ],
+                          child: Padding(
+                            padding: const EdgeInsets.all(25.0),
+                            child: Container(
+                              height: 50,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.black),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              child: const Center(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text('Add Specialized Area'),
+                                    SizedBox(height: 8),
+                                    Icon(Icons.add),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -104,6 +108,7 @@ class _Specialized_AreasState extends State<Specialized_Areas> {
                     },
                   ),
                 ),
+                const Primary_Button(text: 'Continue', route: '/min_investment',)
               ],
             ),
           ),

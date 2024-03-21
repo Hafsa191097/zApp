@@ -1,16 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:z_app/constents/const.dart';
 
 class Profile_Header extends StatelessWidget {
-  const Profile_Header({super.key, required this.header, required this.description});
-  final String header,description;
+  const Profile_Header(
+      {super.key, required this.header, required this.description});
+  final String header, description;
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
+    return Column(
+      children: [
       SizedBox(
-        height: 100,
+        height: 129,
         width: 370,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:z_app/views/capabilities.dart';
 import 'package:z_app/views/minimum_investment.dart';
 import 'package:z_app/views/specialized_areas.dart';
 import 'package:z_app/views/welcom_profile_page.dart';
@@ -40,15 +41,13 @@ class buildPage extends StatelessWidget {
   Widget build(BuildContext context) {
     switch (pageNumber) {
       case 0:
-        
         return WelcomePage_Profile_Setup();
       case 1:
-        
         return Specialized_Areas();
       case 2:
         return Minimum_Investment();
-      // case 3:
-      //   return FourthPage();
+      case 3:
+        return CapabilitiesPage();
       default:
         return Container();
     }

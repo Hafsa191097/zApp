@@ -28,7 +28,7 @@ class _LinearBarState extends State<LinearBar> {
               ),
             ),
           ),
-          const SizedBox(height: 40),
+          const SizedBox(height: 25),
           
         ],
       );

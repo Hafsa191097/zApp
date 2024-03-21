@@ -9,6 +9,11 @@ import 'package:z_app/views/signin_screen.dart';
 import 'package:z_app/views/signup_page.dart';
 import 'package:z_app/views/specialized_areas.dart';
 
+import 'views/capabilities.dart';
+import 'views/profilesub_success.dart';
+import 'views/review_profile.dart';
+import 'views/search.dart';
+
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
@@ -37,7 +42,7 @@ class _MyAppState extends State<MyApp> {
         
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/min_investment',
+      initialRoute: '/',
       routes: {
         onboard.route :(context) => const onboard(),
         SignUp.route :(context) => const SignUp(),
@@ -45,7 +50,12 @@ class _MyAppState extends State<MyApp> {
         ForgotPassword.route :(context) => const ForgotPassword(),
         SetupProfile.route:(context) => const SetupProfile(),
         Specialized_Areas.route:(context) => const Specialized_Areas(),
-        Minimum_Investment.route:(context) => const Minimum_Investment()
+        Minimum_Investment.route:(context) => const Minimum_Investment(),
+        CapabilitiesPage.route:(context) => const CapabilitiesPage(),
+        ReviewProfileInfo.route:(context) => const ReviewProfileInfo(),
+        ProfileSubmissionSuccess.route:(context) => const ProfileSubmissionSuccess(),
+        Search.route:(context) => const Search(),
+        
       },
     );
   }

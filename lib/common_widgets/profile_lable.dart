@@ -9,7 +9,7 @@ class LableTextProfile extends StatelessWidget {
     return Text(
           labaltext,
           style: TextStyle(
-              color: profile_text_color, fontSize: 15, fontWeight: FontWeight.w500),
+              color: profile_text_color, fontSize: 15, fontWeight: FontWeight.w700),
           
         );
   }

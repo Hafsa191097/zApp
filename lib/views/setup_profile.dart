@@ -20,7 +20,6 @@ class _SetupProfileState extends State<SetupProfile> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           LinearBar(totalPages: totalpages, currentPage: _currentPage,),
-          const SizedBox(height: 40),
           buildPage(pageNumber: _currentPage)
         ],
       ),
