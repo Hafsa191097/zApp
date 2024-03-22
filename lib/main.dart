@@ -10,6 +10,7 @@ import 'package:z_app/views/signup_page.dart';
 import 'package:z_app/views/specialized_areas.dart';
 
 import 'views/capabilities.dart';
+import 'views/matches.dart';
 import 'views/profilesub_success.dart';
 import 'views/review_profile.dart';
 import 'views/search.dart';
@@ -37,7 +38,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Z APP',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: primary_color),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.transparent),
         applyElevationOverlayColor: true,
         
       ),
@@ -55,6 +56,7 @@ class _MyAppState extends State<MyApp> {
         ReviewProfileInfo.route:(context) => const ReviewProfileInfo(),
         ProfileSubmissionSuccess.route:(context) => const ProfileSubmissionSuccess(),
         Search.route:(context) => const Search(),
+        Potential_Matches.route:(context) => const Potential_Matches(),
         
       },
     );

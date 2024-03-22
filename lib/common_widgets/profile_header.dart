@@ -13,7 +13,8 @@ class Profile_Header extends StatelessWidget {
     return Column(
       children: [
       SizedBox(
-        height: 129,
+        
+        height: 120,
         width: 370,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
